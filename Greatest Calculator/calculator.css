@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 200px;
+    background-color: rgba(100, 100, 100, 1);
+  }
+
+h1 {
+    white-space: pre-line;
+  }
+
+button {
+  font-size: 2em;
+  padding: 10px, 20px;
+  min-width: 80px;
+  min-height: 80px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgb(207, 85, 255);
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  margin-top: 100px
+  
+}
+
+#btn1 {
+    background-color: rgb(85, 85, 255);
+    color: white;
+    padding: 10px 20px;
+    font-size: 2em;
+    border-radius: 15px;
+    margin-top: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+  }
+
+#btn2 {
+    background-color: rgb(237, 82, 82);
+    color: white;
+    padding: 10px 20px;
+    font-size: 2em;
+    border-radius: 15px;
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+
+
