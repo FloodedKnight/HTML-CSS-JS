@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Calculator</title>
-    <link rel="stylesheet" href="calculator.css">
+    <title>NoAI Stuff</title>
+    <link rel="stylesheet" href="NoAI.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>The only calculator you'll ever need</h1>
-    <h1 id="displayNum"> <br> <br>0</h1>
+    <h1 id="displayNum"> <br>0</h1>
 
-    <button id = "btn1" onclick="btnAdd('btn1')">0</button>
-    <button id = "btn2" onclick="btnAdd('btn2')">0</button>
+    <button id = "btn1" onclick="btnAdd('btn1')" oncontextmenu="btnSub('btn1'); return false;">0</button>
+    <button id = "btn2" onclick="btnAdd('btn2')" oncontextmenu="btnSub('btn2'); return false;">0</button>
     <div>
         <button id = "add" onclick="operate('+')">+</button>
         <button id = "subtract" onclick="operate('-')">−</button>
         <button id = "multiply" onclick="operate('*')">×</button>
         <button id = "divide" onclick="operate('/')">÷</button>
     </div>
-    <script src="calculator.js"></script>
+    <script src="NoAI.js"></script>
 </body>
 </html>
