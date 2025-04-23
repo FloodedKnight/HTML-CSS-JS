@@ -1,7 +1,7 @@
 function formatNum(num){
     const removeDec = num.toString().split(".")[1]
     for (let i = 0; i != num.toString().length; i += 3){
-        
+        // Working on
     }
     let split3 = removeDec.substring
 }
