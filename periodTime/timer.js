@@ -67,7 +67,7 @@ function scheduleCheck(timeInSecs, schedule) {
 // ====== Time Check and UI Update ======
 function updateProgressRing() {
     const now = new Date();
-    const day = now.getDay(); // Sunday=0, Monday=1, ..., Saturday=6
+    const day = (now.getDay() + 6) % 7;
     const timeInSecs = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 
     let schedule = null;
