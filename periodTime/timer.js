@@ -67,7 +67,7 @@ function scheduleCheck(timeInSecs, schedule) {
 // ====== Time Check and UI Update ======
 function updateProgressRing() {
     const now = new Date();
-    const day = (now.getDay() + 6) % 7;
+    const day = now.getDay();
     const timeInSecs = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
 
     let schedule = null;
@@ -86,7 +86,7 @@ function updateProgressRing() {
         return;
     }
 
-    if (day === 2) { // Wednesday
+    if (day === 3) { // Wednesday
         if (timeInSecs < 32400) {
             text.innerHTML = "Starting";
             subtext.innerHTML = "Soon";
@@ -94,7 +94,7 @@ function updateProgressRing() {
             return;
         }
         schedule = wedTimes;
-    } else if (day === 1 || day === 3) { // Tue/Thurs
+    } else if (day === 2 || day === 4) { // Tue/Thurs
         if (timeInSecs < 27900) {
             text.innerHTML = "Starting";
             subtext.innerHTML = "Soon";
@@ -102,7 +102,7 @@ function updateProgressRing() {
             return;
         }
         schedule = tueThursTimes;
-    } else if (day === 0 || day === 4) { // Mon/Fri
+    } else if (day === 1 || day === 5) { // Mon/Fri
         if (timeInSecs < 27900) {
             text.innerHTML = "Starting";
             subtext.innerHTML = "Soon";
