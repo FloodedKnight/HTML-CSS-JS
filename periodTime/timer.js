@@ -74,7 +74,7 @@ function updateProgressRing() {
 
     if (day === 6 || day === 0) {
         text.innerHTML = "Weekend";
-        subtext.innerHTML = ":)";
+        subtext.innerHTML = "";
         setCirclePercent(0);
         return;
     }
