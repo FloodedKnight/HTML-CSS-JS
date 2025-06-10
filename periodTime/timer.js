@@ -3,7 +3,7 @@ const text = document.getElementById('time');
 const subtext = document.getElementById('Remaining');
 
 
-const radius = 310;
+const radius = 45.9;
 const circumference = 2 * Math.PI * radius;
 circle.style.strokeDasharray = circumference;
 circle.style.strokeDashoffset = circumference;
