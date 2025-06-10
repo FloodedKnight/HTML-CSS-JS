@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCHS Period Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>NCHS Clock</title>
     <link rel="stylesheet" href="timer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,6 @@
 </head>
 <body>
     <div class="scale">
-
         <div class="outer">
             <div class="inner">
                 <div id="timeLeft">
@@ -20,14 +19,25 @@
                 </div>
             </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="700px" height="700px">
+        <!-- SVG now uses viewBox and percentage units for universal scaling -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 100 100"
+             width="100%"
+             height="100%"
+             style="position:absolute;top:0;left:0;">
             <defs>
                 <linearGradient id="GradientColor">
                     <stop offset="0%" stop-color="#DA22FF" />
                     <stop offset="100%" stop-color="#9733EE" />
                 </linearGradient>
             </defs>
-            <circle cx="50%" cy="50%" r="310" stroke-linecap="round" />
+            <circle
+                cx="50"
+                cy="50"
+                r="45.5"
+                stroke-linecap="round"
+                stroke-width="9"
+            />
         </svg>
     </div>
     <script src="timer.js"></script>
