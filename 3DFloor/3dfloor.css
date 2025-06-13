@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    perspective: 1000px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#custBackground {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, yellow, green);
+    z-index: -1;
+}
+
+.grid {
+    display: grid;
+    transform-style: preserve-3d;
+    transform: rotateX(75deg) translateY(20vh);
+    transform-origin: bottom center;
+}
+
+.square {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.1vh solid rgba(255, 255, 255, 0.6);
+}
+
+#code{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 2em;
+}
