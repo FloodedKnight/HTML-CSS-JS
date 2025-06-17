@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Line Plotting Tool</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="plot.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Noto+Sans+Math&family=Rubik:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 id="chartJStitle">Made with Charts.js</h1>
+  <div>
+    <canvas id="chart"></canvas>
+  </div>
+  <div id="coordinatesContainer">
+    <h2>Upload CSV or enter coordinates</h2>
+    <input type="file" id="fileInput" accept=".csv" placeholder="Import CSV">
+    <textarea id="coordinates" type="text" class="changeCol" cols="20" rows="20" style="resize: vertical;">
+0,10
+1,11
+2,12
+3,15
+4,14
+5,18
+6,17
+7,20
+8,22
+9,25
+10,24
+    </textarea>
+    <button class="changeCol" onclick="updateCoordinates()">Update graph with new points</button>
+  </div>
+  <div id="changeBackgroundContainer">
+    <p class="settingsText">COLORS</p>
+    <input id="backgroundCol1" type="color" class="changeCol" value="#ff6f00"></input>
+    <input id="backgroundCol2" type="color" class="changeCol" value="#f50066"></input>
+    <button class="changeCol boxshadow" id="changeColButton" onclick="changeCol('bg')">Change background color</button>
+    <br>
+
+    <input id="lineCol" type="color" class="changeCol"></input>
+    <button class="changeCol boxshadow" id="lineCol" onclick="changeCol('line')">Change line color</button>
+    <br>
+
+    <input id="gridCol" type="color" class="changeCol" value="#3C3C3C"></input>
+    <button class="changeCol boxshadow" onclick="changeCol('grid')">Change grid color</button>
+    <br>
+
+    <input id="fontCol" type="color" class="changeCol" value="#000000"></input>
+    <button class="changeCol boxshadow" onclick="changeCol('font')">Change font color</button>
+    <br>
+
+    <p class="settingsText">GRAPH</p>
+    <input id="title" class="changeCol" placeholder="Title"></input>
+    <input id="AxisX" class="changeCol" placeholder="X-Axis Label"></input>
+    <input id="AxisY" class="changeCol" placeholder="Y-Axis Label"></input>
+    <button class="changeCol boxshadow" onclick="changeLabels()">Change labels</button>
+    <br>
+
+    <input id="scaleX" class="changeCol" placeholder="X-Axis Scale"></input>
+    <input id="scaleY" class="changeCol" placeholder="Y-Axis Scale"></input>
+    <button class="changeCol boxshadow" onclick="changeScale()">Change scale</button>
+    <br>
+
+    
+    <input id="smoothness" class="" type="range" min="0" max="1" step="0.01" value="0.0"></input>
+    <button class="changeCol" onclick="" id="smoothDisplay">Smoothness: 0.00</button>
+    <br>
+
+    
+    <button class="changeCol" id="exportChart" onclick="exportChart()">Export Chart</button>
+  </div>
+
+  <script src="plot.js"></script>
+</body>
+</html>
