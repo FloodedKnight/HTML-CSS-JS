@@ -117,7 +117,6 @@ let chart = new Chart(ctx, {
           },
       
           y: {
-            min: 0,
             title: {
               display: true,
               text: 'Y-axis',
